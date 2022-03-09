@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="cardBackground" format="color" />
+    <attr name="colorNFCActivated" format="color" />
+    <attr name="colorNFCDisabled" format="color" />
+    <attr name="colorTabChecked" format="color" />
+    <attr name="colorTabNotChecked" format="color" />
+</resources>

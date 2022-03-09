@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/nfc_icon"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_wifi_tethering"
+        app:layout_constraintBottom_toTopOf="@id/nfc_status"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?colorNFCActivated" />
+
+    <TextView
+        android:id="@+id/nfc_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nfc_icon"
+        app:layout_constraintBottom_toTopOf="@id/card"
+        android:layout_marginTop="5dp"
+        android:text="Пропуск активен"
+        android:textSize="12sp"
+        android:textColor="?colorAccent"
+        android:backgroundTint="?cardBackground"
+        android:fontFamily="@font/bwsurco_bold"
+        android:background="@drawable/rounded_shape"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        app:layout_constraintDimensionRatio="86:55"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardBackgroundColor="?cardBackground"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/pass_back"
+            android:padding="25dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_usatu_v_rus_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bwsurco_bold"
+                android:text="@string/usatu"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                android:gravity="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/bwsurco_regular"
+                android:text="Электронный студенческий билет"
+                app:layout_constraintEnd_toStartOf="@id/logo"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="••0047"
+                android:textColor="?colorAccent"
+                android:backgroundTint="?cardBackground"
+                android:textSize="18sp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:fontFamily="@font/bwsurco_black"
+                android:background="@drawable/rounded_shape"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="?cardBackground"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/change_language"
+        app:layout_constraintEnd_toStartOf="@id/change_language"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/change_language">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/bwsurco_medium"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:text="@string/settings"
+            android:textColor="?colorAccent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/change_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:cardBackgroundColor="?cardBackground"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/settings">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="10dp"
+            android:src="@drawable/ic_language"
+            app:tint="?colorAccent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

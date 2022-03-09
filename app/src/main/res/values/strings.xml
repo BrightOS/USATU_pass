@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Пропуск УГАТУ</string>
+    <string name="usatu">УГАТУ</string>
+    <string name="id">ID пользователя:</string>
+    <string name="settings">Настройки</string>
+    <string name="add_pass">Добавить пропуск</string>
+    <string name="delete_pass">Удалить пропуск с устройства</string>
+    <string name="arrow_back">Arrow back</string>
 </resources>
